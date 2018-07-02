@@ -1,0 +1,1181 @@
+ReportName = Units Expense Summary - GW
+ReportGroup = Maintenance
+object ppReport1: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.WoMaster
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Units Expense Summary - GW'
+  PrinterSetup.PaperName = 'Letter'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 6350
+  PrinterSetup.mmMarginLeft = 6350
+  PrinterSetup.mmMarginRight = 6350
+  PrinterSetup.mmMarginTop = 6350
+  PrinterSetup.mmPaperHeight = 279401
+  PrinterSetup.mmPaperWidth = 215900
+  PrinterSetup.PaperSize = 1
+  SaveAsTemplate = True
+  Template.DatabaseSettings.DataPipeline = dpReports
+  Template.DatabaseSettings.Name = 'Units Expense Summary - GW'
+  Template.DatabaseSettings.NameField = 'ReportName'
+  Template.DatabaseSettings.TemplateField = 'NewDef'
+  Template.FileName = 'Units Expense Summary-GW.rtm'
+  Template.SaveTo = stDatabase
+  Template.Format = ftASCII
+  AllowPrintToArchive = True
+  AllowPrintToFile = True
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  EmailSettings.Enabled = True
+  LanguageID = 'Default'
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = True
+  OutlineSettings.Visible = True
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.ZoomSetting = zs100Percent
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  SavePrinterSetup = True
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = True
+  TextSearchSettings.Visible = True
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 216
+  Top = 156
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'WoMaster'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 15346
+    mmPrintPosition = 0
+    object ppLine1: TppLine
+      UserName = 'Line1'
+      Pen.Color = clNavy
+      Pen.Width = 2
+      Weight = 1.500000000000000000
+      mmHeight = 3969
+      mmLeft = 1058
+      mmTop = 2381
+      mmWidth = 200555
+      BandType = 1
+      LayerName = Foreground
+    end
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      HyperlinkEnabled = False
+      Caption = 'Units Expense Summary'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'TIMES NEW ROMAN'
+      Font.Size = 16
+      Font.Style = [fsBold, fsItalic]
+      Transparent = True
+      mmHeight = 6562
+      mmLeft = 1323
+      mmTop = 3175
+      mmWidth = 57616
+      BandType = 1
+      LayerName = Foreground
+    end
+    object ppDBText8: TppDBText
+      UserName = 'DBText8'
+      HyperlinkEnabled = False
+      AutoSize = True
+      DataField = 'CompanyName'
+      DataPipeline = dpCompanyInfo
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'TIMES NEW ROMAN'
+      Font.Size = 16
+      Font.Style = [fsBold, fsItalic]
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'dpCompanyInfo'
+      mmHeight = 6350
+      mmLeft = 122502
+      mmTop = 3175
+      mmWidth = 78317
+      BandType = 1
+      LayerName = Foreground
+    end
+    object ppLabel12: TppLabel
+      UserName = 'Params'
+      HyperlinkEnabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'TIMES NEW ROMAN'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 1323
+      mmTop = 10054
+      mmWidth = 794
+      BandType = 1
+      LayerName = Foreground
+    end
+  end
+  object ppHeaderBand1: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 7408
+    mmPrintPosition = 0
+    object ppLine3: TppLine
+      UserName = 'Line3'
+      Pen.Color = clNavy
+      Pen.Width = 2
+      Weight = 1.500000000000000000
+      mmHeight = 2117
+      mmLeft = 1323
+      mmTop = 6615
+      mmWidth = 200555
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLine2: TppLine
+      UserName = 'Line2'
+      Pen.Color = clNavy
+      Pen.Width = 2
+      Weight = 1.500000000000000000
+      mmHeight = 2910
+      mmLeft = 1323
+      mmTop = 1058
+      mmWidth = 200555
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      HyperlinkEnabled = False
+      AutoSize = False
+      Caption = 'WO Count'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'TIMES NEW ROMAN'
+      Font.Size = 9
+      Font.Style = [fsBold, fsItalic]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 62177
+      mmTop = 2381
+      mmWidth = 18521
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label3'
+      HyperlinkEnabled = False
+      AutoSize = False
+      Caption = 'Labor Cost'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'TIMES NEW ROMAN'
+      Font.Size = 9
+      Font.Style = [fsBold, fsItalic]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 105304
+      mmTop = 2381
+      mmWidth = 17992
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      HyperlinkEnabled = False
+      AutoSize = False
+      Caption = 'Parts Cost'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'TIMES NEW ROMAN'
+      Font.Size = 9
+      Font.Style = [fsBold, fsItalic]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 124619
+      mmTop = 2381
+      mmWidth = 16933
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      HyperlinkEnabled = False
+      AutoSize = False
+      Caption = 'Other Cost'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'TIMES NEW ROMAN'
+      Font.Size = 9
+      Font.Style = [fsBold, fsItalic]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 142875
+      mmTop = 2381
+      mmWidth = 17727
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label6'
+      HyperlinkEnabled = False
+      AutoSize = False
+      Caption = 'Tax Cost'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'TIMES NEW ROMAN'
+      Font.Size = 9
+      Font.Style = [fsBold, fsItalic]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 161925
+      mmTop = 2381
+      mmWidth = 14817
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel7: TppLabel
+      UserName = 'Label7'
+      HyperlinkEnabled = False
+      AutoSize = False
+      Caption = 'Total Cost'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'TIMES NEW ROMAN'
+      Font.Size = 9
+      Font.Style = [fsBold, fsItalic]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 179388
+      mmTop = 2381
+      mmWidth = 16669
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel9: TppLabel
+      UserName = 'Label9'
+      HyperlinkEnabled = False
+      AutoSize = False
+      Caption = 'Unit Name'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'TIMES NEW ROMAN'
+      Font.Size = 9
+      Font.Style = [fsBold, fsItalic]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 3175
+      mmTop = 2381
+      mmWidth = 18521
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel8: TppLabel
+      UserName = 'Label8'
+      HyperlinkEnabled = False
+      AutoSize = False
+      Caption = 'Labor Hours'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'TIMES NEW ROMAN'
+      Font.Size = 9
+      Font.Style = [fsBold, fsItalic]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 83873
+      mmTop = 2381
+      mmWidth = 17992
+      BandType = 0
+      LayerName = Foreground
+    end
+  end
+  object ppDetailBand1: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 3969
+    mmPrintPosition = 0
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      HyperlinkEnabled = False
+      AutoSize = True
+      DataField = 'COUNT_2'
+      DataPipeline = daADOQueryDataView1.WoMaster
+      DisplayFormat = '#,0;-#,0'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'WoMaster'
+      mmHeight = 3704
+      mmLeft = 68527
+      mmTop = 529
+      mmWidth = 12171
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      HyperlinkEnabled = False
+      DataField = 'SUM_WoMaster_LaborCost'
+      DataPipeline = daADOQueryDataView1.WoMaster
+      DisplayFormat = '$#,0.00;-$#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'WoMaster'
+      mmHeight = 3175
+      mmLeft = 105304
+      mmTop = 529
+      mmWidth = 17992
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      HyperlinkEnabled = False
+      DataField = 'SUM_WoMaster_PartsCost'
+      DataPipeline = daADOQueryDataView1.WoMaster
+      DisplayFormat = '$#,0.00;-$#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'WoMaster'
+      mmHeight = 3175
+      mmLeft = 124619
+      mmTop = 529
+      mmWidth = 16933
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      HyperlinkEnabled = False
+      DataField = 'SUM_WoMaster_OtherCost'
+      DataPipeline = daADOQueryDataView1.WoMaster
+      DisplayFormat = '$#,0.00;-$#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'WoMaster'
+      mmHeight = 3175
+      mmLeft = 142875
+      mmTop = 529
+      mmWidth = 17727
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText6: TppDBText
+      UserName = 'DBText6'
+      HyperlinkEnabled = False
+      DataField = 'SUM_WoMaster_TaxCost'
+      DataPipeline = daADOQueryDataView1.WoMaster
+      DisplayFormat = '$#,0.00;-$#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'WoMaster'
+      mmHeight = 3175
+      mmLeft = 161925
+      mmTop = 529
+      mmWidth = 14817
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText7: TppDBText
+      UserName = 'DBText7'
+      HyperlinkEnabled = False
+      DataField = 'SUM_WoMaster_TotalCost'
+      DataPipeline = daADOQueryDataView1.WoMaster
+      DisplayFormat = '$#,0.00;-$#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'WoMaster'
+      mmHeight = 3175
+      mmLeft = 179388
+      mmTop = 529
+      mmWidth = 16669
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      HyperlinkEnabled = False
+      DataField = 'UnitName'
+      DataPipeline = daADOQueryDataView1.WoMaster
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'WoMaster'
+      mmHeight = 3175
+      mmLeft = 3175
+      mmTop = 529
+      mmWidth = 57150
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText9: TppDBText
+      UserName = 'DBText9'
+      HyperlinkEnabled = False
+      DataField = 'SUM_WoMaster_LaborHours'
+      DataPipeline = daADOQueryDataView1.WoMaster
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'WoMaster'
+      mmHeight = 3175
+      mmLeft = 83873
+      mmTop = 529
+      mmWidth = 17992
+      BandType = 4
+      LayerName = Foreground
+    end
+  end
+  object ppFooterBand1: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 7144
+    mmPrintPosition = 0
+    object ppLine4: TppLine
+      UserName = 'Line4'
+      Pen.Color = clGray
+      Pen.Width = 2
+      Weight = 1.500000000000000000
+      mmHeight = 2381
+      mmLeft = 1323
+      mmTop = 4763
+      mmWidth = 200555
+      BandType = 8
+      LayerName = Foreground
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'SystemVariable1'
+      HyperlinkEnabled = False
+      VarType = vtPrintDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'TIMES NEW ROMAN'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      mmHeight = 4487
+      mmLeft = 1323
+      mmTop = 1323
+      mmWidth = 17187
+      BandType = 8
+      LayerName = Foreground
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'SystemVariable2'
+      HyperlinkEnabled = False
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'TIMES NEW ROMAN'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 4487
+      mmLeft = 184680
+      mmTop = 1323
+      mmWidth = 17187
+      BandType = 8
+      LayerName = Foreground
+    end
+  end
+  object ppSummaryBand1: TppSummaryBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 5556
+    mmPrintPosition = 0
+    object ppDBCalc6: TppDBCalc
+      UserName = 'DBCalc6'
+      HyperlinkEnabled = False
+      DataField = 'SUM_WoMaster_TotalCost'
+      DataPipeline = daADOQueryDataView1.WoMaster
+      DisplayFormat = '$#,0.00;-$#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'WoMaster'
+      mmHeight = 3440
+      mmLeft = 176477
+      mmTop = 2117
+      mmWidth = 19579
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppLine6: TppLine
+      UserName = 'Line6'
+      Weight = 0.750000000000000000
+      mmHeight = 1058
+      mmLeft = 61119
+      mmTop = 1323
+      mmWidth = 134673
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppLabel15: TppLabel
+      UserName = 'Label15'
+      HyperlinkEnabled = False
+      Caption = 'Totals All Units'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3440
+      mmLeft = 3440
+      mmTop = 1852
+      mmWidth = 20373
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppDBCalc7: TppDBCalc
+      UserName = 'DBCalc7'
+      HyperlinkEnabled = False
+      DataField = 'SUM_WoMaster_TaxCost'
+      DataPipeline = daADOQueryDataView1.WoMaster
+      DisplayFormat = '$#,0.00;-$#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'WoMaster'
+      mmHeight = 3440
+      mmLeft = 162190
+      mmTop = 2117
+      mmWidth = 14552
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppDBCalc8: TppDBCalc
+      UserName = 'DBCalc8'
+      HyperlinkEnabled = False
+      DataField = 'SUM_WoMaster_OtherCost'
+      DataPipeline = daADOQueryDataView1.WoMaster
+      DisplayFormat = '$#,0.00;-$#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'WoMaster'
+      mmHeight = 3440
+      mmLeft = 143404
+      mmTop = 2117
+      mmWidth = 17198
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppDBCalc9: TppDBCalc
+      UserName = 'DBCalc9'
+      HyperlinkEnabled = False
+      DataField = 'SUM_WoMaster_PartsCost'
+      DataPipeline = daADOQueryDataView1.WoMaster
+      DisplayFormat = '$#,0.00;-$#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'WoMaster'
+      mmHeight = 3440
+      mmLeft = 124354
+      mmTop = 2117
+      mmWidth = 17198
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppDBCalc10: TppDBCalc
+      UserName = 'DBCalc10'
+      HyperlinkEnabled = False
+      DataField = 'SUM_WoMaster_LaborCost'
+      DataPipeline = daADOQueryDataView1.WoMaster
+      DisplayFormat = '$#,0.00;-$#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'WoMaster'
+      mmHeight = 3440
+      mmLeft = 102923
+      mmTop = 2117
+      mmWidth = 20373
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppDBCalc12: TppDBCalc
+      UserName = 'DBCalc12'
+      HyperlinkEnabled = False
+      DataField = 'COUNT_2'
+      DataPipeline = daADOQueryDataView1.WoMaster
+      DisplayFormat = '#,0;-#,0'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'WoMaster'
+      mmHeight = 3440
+      mmLeft = 63500
+      mmTop = 2117
+      mmWidth = 17198
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppDBCalc1: TppDBCalc
+      UserName = 'DBCalc101'
+      HyperlinkEnabled = False
+      DataField = 'SUM_WoMaster_LaborHours'
+      DataPipeline = daADOQueryDataView1.WoMaster
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'WoMaster'
+      mmHeight = 3440
+      mmLeft = 84667
+      mmTop = 2117
+      mmWidth = 17198
+      BandType = 7
+      LayerName = Foreground
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_WoMaster'
+      Height = 573
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 290
+      AutoSearchTabOrder = 0
+      object WoMaster: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'WoMaster'
+        object ppField1: TppField
+          FieldAlias = 'Unit'
+          FieldName = 'Unit'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 0
+          Position = 0
+          TableName = 'WoMaster'
+        end
+        object ppField2: TppField
+          FieldAlias = 'UnitName'
+          FieldName = 'UnitName'
+          FieldLength = 80
+          DisplayWidth = 80
+          Position = 1
+          TableName = 'WoMaster'
+        end
+        object ppField3: TppField
+          FieldAlias = 'CategoryID'
+          FieldName = 'CategoryID'
+          FieldLength = 25
+          IsDetail = True
+          DisplayWidth = 25
+          Position = 2
+          TableName = 'Units'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Type'
+          FieldName = 'Type'
+          FieldLength = 25
+          IsDetail = True
+          DisplayWidth = 25
+          Position = 3
+          TableName = 'Units'
+        end
+        object ppField5: TppField
+          FieldAlias = 'WOCount'
+          FieldName = 'COUNT_2'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtInteger
+          DisplayWidth = 0
+          Position = 4
+          TableName = 'WoMaster'
+        end
+        object ppField6: TppField
+          FieldAlias = 'LaborHours'
+          FieldName = 'SUM_WoMaster_LaborHours'
+          FieldLength = 5
+          Linkable = False
+          DataType = dtDouble
+          DisplayWidth = 5
+          Position = 5
+          TableName = 'WoMaster'
+        end
+        object ppField7: TppField
+          FieldAlias = 'LaborCost'
+          FieldName = 'SUM_WoMaster_LaborCost'
+          FieldLength = 2
+          Linkable = False
+          DataType = dtDouble
+          DisplayWidth = 2
+          Position = 6
+          TableName = 'WoMaster'
+        end
+        object ppField8: TppField
+          FieldAlias = 'PartsCost'
+          FieldName = 'SUM_WoMaster_PartsCost'
+          FieldLength = 2
+          Linkable = False
+          DataType = dtDouble
+          DisplayWidth = 2
+          Position = 7
+          TableName = 'WoMaster'
+        end
+        object ppField9: TppField
+          FieldAlias = 'OtherCost'
+          FieldName = 'SUM_WoMaster_OtherCost'
+          FieldLength = 2
+          Linkable = False
+          DataType = dtDouble
+          DisplayWidth = 2
+          Position = 8
+          TableName = 'WoMaster'
+        end
+        object ppField10: TppField
+          FieldAlias = 'TaxCost'
+          FieldName = 'SUM_WoMaster_TaxCost'
+          FieldLength = 2
+          Linkable = False
+          DataType = dtDouble
+          DisplayWidth = 2
+          Position = 9
+          TableName = 'WoMaster'
+        end
+        object ppField11: TppField
+          FieldAlias = 'TotalCost'
+          FieldName = 'SUM_WoMaster_TotalCost'
+          FieldLength = 2
+          Linkable = False
+          DataType = dtDouble
+          DisplayWidth = 2
+          Position = 10
+          TableName = 'WoMaster'
+        end
+      end
+      object daSQL1: TdaSQL
+        DatabaseName = 'ADO1'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'WoMaster'
+        GroupByFieldsSynced = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT WoMaster.Unit, WoMaster.UnitName, '
+          '       Units.CategoryID, Units.Type, '
+          '       COUNT(*) COUNT_2, '
+          '       SUM(WoMaster.LaborHours) SUM_WoMaster_LaborHours, '
+          '       SUM(WoMaster.LaborCost) SUM_WoMaster_LaborCost, '
+          '       SUM(WoMaster.PartsCost) SUM_WoMaster_PartsCost, '
+          '       SUM(WoMaster.OtherCost) SUM_WoMaster_OtherCost, '
+          '       SUM(WoMaster.TaxCost) SUM_WoMaster_TaxCost, '
+          '       SUM(WoMaster.TotalCost) SUM_WoMaster_TotalCost'
+          'FROM WoMaster WoMaster INNER JOIN Units Units ON '
+          '     (Units.RecordNumber = WoMaster.Unit)'
+          'WHERE ( WoMaster.CompletedDate IS NOT NULL  )'
+          'GROUP BY WoMaster.Unit, WoMaster.UnitName, '
+          '         Units.CategoryID, Units.Type'
+          'ORDER BY WoMaster.UnitName, WoMaster.Unit')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'WOCount'
+          DataType = dtInteger
+          DisplayWidth = 0
+          FieldAlias = 'Numbered'
+          FieldLength = 0
+          FieldName = 'Numbered'
+          Linkable = False
+          SQLFieldName = 'COUNT_2'
+          TableAlias = 'WoMaster'
+          TableName = 'WoMaster'
+          TableSQLAlias = 'WoMaster'
+          CalcType = dacaCount
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 8
+          Alias = 'LaborHours'
+          DataType = dtDouble
+          DisplayWidth = 5
+          FieldAlias = 'LaborHours'
+          FieldLength = 5
+          FieldName = 'LaborHours'
+          Linkable = False
+          SQLFieldName = 'SUM_WoMaster_LaborHours'
+          TableAlias = 'WoMaster'
+          TableName = 'WoMaster'
+          TableSQLAlias = 'WoMaster'
+          CalcType = dacaSum
+        end
+        object daCalculation3: TdaCalculation
+          ChildType = 8
+          Alias = 'LaborCost'
+          DataType = dtDouble
+          DisplayWidth = 2
+          FieldAlias = 'LaborCost'
+          FieldLength = 2
+          FieldName = 'LaborCost'
+          Linkable = False
+          SQLFieldName = 'SUM_WoMaster_LaborCost'
+          TableAlias = 'WoMaster'
+          TableName = 'WoMaster'
+          TableSQLAlias = 'WoMaster'
+          CalcType = dacaSum
+        end
+        object daCalculation4: TdaCalculation
+          ChildType = 8
+          Alias = 'PartsCost'
+          DataType = dtDouble
+          DisplayWidth = 2
+          FieldAlias = 'PartsCost'
+          FieldLength = 2
+          FieldName = 'PartsCost'
+          Linkable = False
+          SQLFieldName = 'SUM_WoMaster_PartsCost'
+          TableAlias = 'WoMaster'
+          TableName = 'WoMaster'
+          TableSQLAlias = 'WoMaster'
+          CalcType = dacaSum
+        end
+        object daCalculation5: TdaCalculation
+          ChildType = 8
+          Alias = 'OtherCost'
+          DataType = dtDouble
+          DisplayWidth = 2
+          FieldAlias = 'OtherCost'
+          FieldLength = 2
+          FieldName = 'OtherCost'
+          Linkable = False
+          SQLFieldName = 'SUM_WoMaster_OtherCost'
+          TableAlias = 'WoMaster'
+          TableName = 'WoMaster'
+          TableSQLAlias = 'WoMaster'
+          CalcType = dacaSum
+        end
+        object daCalculation6: TdaCalculation
+          ChildType = 8
+          Alias = 'TaxCost'
+          DataType = dtDouble
+          DisplayWidth = 2
+          FieldAlias = 'TaxCost'
+          FieldLength = 2
+          FieldName = 'TaxCost'
+          Linkable = False
+          SQLFieldName = 'SUM_WoMaster_TaxCost'
+          TableAlias = 'WoMaster'
+          TableName = 'WoMaster'
+          TableSQLAlias = 'WoMaster'
+          CalcType = dacaSum
+        end
+        object daCalculation7: TdaCalculation
+          ChildType = 8
+          Alias = 'TotalCost'
+          DataType = dtDouble
+          DisplayWidth = 2
+          FieldAlias = 'TotalCost'
+          FieldLength = 2
+          FieldName = 'TotalCost'
+          Linkable = False
+          SQLFieldName = 'SUM_WoMaster_TotalCost'
+          TableAlias = 'WoMaster'
+          TableName = 'WoMaster'
+          TableSQLAlias = 'WoMaster'
+          CalcType = dacaSum
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoNotBlank
+          Value = '10/09/03 11:06:48 AM'
+          object TdaField
+            Alias = 'CompletedDate'
+            DataType = dtDateTime
+            DisplayWidth = 0
+            FieldAlias = 'CompletedDate'
+            FieldLength = 0
+            FieldName = 'CompletedDate'
+            SQLFieldName = 'CompletedDate'
+            TableAlias = 'WoMaster'
+            TableName = 'WoMaster'
+            TableSQLAlias = 'WoMaster'
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Unit'
+          DataType = dtDouble
+          DisplayWidth = 0
+          FieldAlias = 'Unit'
+          FieldLength = 0
+          FieldName = 'Unit'
+          SQLFieldName = 'Unit'
+          TableAlias = 'WoMaster'
+          TableName = 'WoMaster'
+          TableSQLAlias = 'WoMaster'
+        end
+        object daField2: TdaField
+          Alias = 'UnitName'
+          DisplayWidth = 80
+          FieldAlias = 'UnitName'
+          FieldLength = 80
+          FieldName = 'UnitName'
+          SQLFieldName = 'UnitName'
+          TableAlias = 'WoMaster'
+          TableName = 'WoMaster'
+          TableSQLAlias = 'WoMaster'
+        end
+        object daField3: TdaField
+          Alias = 'CategoryID'
+          DisplayWidth = 25
+          FieldAlias = 'CategoryID'
+          FieldLength = 25
+          FieldName = 'CategoryID'
+          IsDetail = True
+          SQLFieldName = 'CategoryID'
+          TableAlias = 'Units'
+          TableName = 'Units'
+          TableSQLAlias = 'Units'
+        end
+        object daField4: TdaField
+          Alias = 'Type'
+          DisplayWidth = 25
+          FieldAlias = 'Type'
+          FieldLength = 25
+          FieldName = 'Type'
+          IsDetail = True
+          SQLFieldName = 'Type'
+          TableAlias = 'Units'
+          TableName = 'Units'
+          TableSQLAlias = 'Units'
+        end
+        object daField5: TdaField
+          ChildType = 1
+          Alias = 'Unit'
+          DataType = dtDouble
+          DisplayWidth = 0
+          FieldAlias = 'Unit'
+          FieldLength = 0
+          FieldName = 'Unit'
+          SQLFieldName = 'Unit'
+          TableAlias = 'WoMaster'
+          TableName = 'WoMaster'
+          TableSQLAlias = 'WoMaster'
+        end
+        object daField6: TdaField
+          ChildType = 1
+          Alias = 'UnitName'
+          DisplayWidth = 80
+          FieldAlias = 'UnitName'
+          FieldLength = 80
+          FieldName = 'UnitName'
+          SQLFieldName = 'UnitName'
+          TableAlias = 'WoMaster'
+          TableName = 'WoMaster'
+          TableSQLAlias = 'WoMaster'
+        end
+        object daField7: TdaField
+          ChildType = 1
+          Alias = 'CategoryID'
+          DisplayWidth = 25
+          FieldAlias = 'CategoryID'
+          FieldLength = 25
+          FieldName = 'CategoryID'
+          SQLFieldName = 'CategoryID'
+          TableAlias = 'Units'
+          TableName = 'Units'
+          TableSQLAlias = 'Units'
+        end
+        object daField8: TdaField
+          ChildType = 1
+          Alias = 'Type'
+          DisplayWidth = 25
+          FieldAlias = 'Type'
+          FieldLength = 25
+          FieldName = 'Type'
+          SQLFieldName = 'Type'
+          TableAlias = 'Units'
+          TableName = 'Units'
+          TableSQLAlias = 'Units'
+        end
+        object daField9: TdaField
+          ChildType = 2
+          Alias = 'UnitName'
+          DisplayWidth = 80
+          FieldAlias = 'UnitName'
+          FieldLength = 80
+          FieldName = 'UnitName'
+          SQLFieldName = 'UnitName'
+          TableAlias = 'WoMaster'
+          TableName = 'WoMaster'
+          TableSQLAlias = 'WoMaster'
+        end
+        object daField10: TdaField
+          ChildType = 2
+          Alias = 'Unit'
+          DataType = dtDouble
+          DisplayWidth = 0
+          FieldAlias = 'Unit'
+          FieldLength = 0
+          FieldName = 'Unit'
+          SQLFieldName = 'Unit'
+          TableAlias = 'WoMaster'
+          TableName = 'WoMaster'
+          TableSQLAlias = 'WoMaster'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'WoMaster'
+          JoinType = dajtNone
+          SQLAlias = 'WoMaster'
+          TableAlias = 'WoMaster'
+          TableName = 'WoMaster'
+        end
+        object daTable2: TdaTable
+          ChildType = 5
+          Alias = 'Units'
+          SQLAlias = 'Units'
+          TableAlias = 'Units'
+          TableName = 'Units'
+          object daTableJoin1: TdaTableJoin
+            ChildType = 6
+            object daField12: TdaField
+              ChildType = 3
+              Alias = 'RecordNumber'
+              DataType = dtDouble
+              DisplayWidth = 0
+              FieldAlias = 'RecordNumber'
+              FieldLength = 0
+              FieldName = 'RecordNumber'
+              SQLFieldName = 'RecordNumber'
+              TableAlias = 'Units'
+              TableName = 'Units'
+              TableSQLAlias = 'Units'
+            end
+            object daField11: TdaField
+              ChildType = 4
+              Alias = 'Unit'
+              DataType = dtDouble
+              DisplayWidth = 0
+              FieldAlias = 'Unit'
+              FieldLength = 0
+              FieldName = 'Unit'
+              SQLFieldName = 'Unit'
+              TableAlias = 'WoMaster'
+              TableName = 'WoMaster'
+              TableSQLAlias = 'WoMaster'
+            end
+          end
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground'
+      LayerType = ltBanded
+      Index = 0
+    end
+  end
+  object ppParameterList1: TppParameterList
+  end
+end
+
